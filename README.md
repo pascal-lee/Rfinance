@@ -1,4 +1,4 @@
 # Rfinance
 My repo for finance
 
-data, analysis, insight, 
+data, analysis, insight, math
