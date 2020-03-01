@@ -9,4 +9,7 @@ if (length(new.pkg)){
   install.packages(new.pkg,dependencies = TRUE)
 }
 
-                                                                            
+require(quantmod)
+getSymbols('AAPL')
+head(AAPL)                                                                            
+chart_Series(Ad(AAPL))
