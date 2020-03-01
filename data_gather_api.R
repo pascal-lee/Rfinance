@@ -16,3 +16,9 @@ chart_Series(Ad(AAPL))
 
 data <-getSymbols('AAPL', from ='2000-01-01', to = '2018-12-31', auto.assign = FALSE)
 head(data)
+
+getSymbols('005930.KS',from='2020-01-01', to= '2020-02-01')
+chart_Series(Ad(`005930.KS`))
+tail(Cl(`005930.KS`))
+getSymbols('DGS10',src='FRED')
+chart_Series(DGS10)
