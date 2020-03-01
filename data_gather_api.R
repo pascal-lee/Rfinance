@@ -13,3 +13,6 @@ require(quantmod)
 getSymbols('AAPL')
 head(AAPL)                                                                            
 chart_Series(Ad(AAPL))
+
+data <-getSymbols('AAPL', from ='2000-01-01', to = '2018-12-31', auto.assign = FALSE)
+head(data)
