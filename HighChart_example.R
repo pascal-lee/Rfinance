@@ -1,17 +1,12 @@
-require(tidyverse)
-require(timetk)
-require(kableExtra)
-require(highcharter)
-require(quantmod)
-require(PerformanceAnalytics)
-
 pkg<-c('magrittr','quantmod','rvest','httr','jsonlite',
        'readr','readxl','stringr','lubridate','dpyr',
-       'tidyr','ggplot2','corrplot','dygraphs',
+       'tidyvese','ggplot2','corrplot','dygraphs',
        'highcharter','plotly','PerformanceAnalytics',
        'nlopter','quadprog','riskPortfolios','cccp',
-       'timetk','bromm','stargazer')
+       'timetk','bromm','stargazer','tidyquant','uandl', 'xts')
 new.pkg <-pkg[!pkg %in% installed.packages()[,"Package"]]
+require(tidyquant)
+require(tidyverse)
 if (length(new.pkg)){
   install.packages(new.pkg,dependencies = TRUE)
 }
@@ -45,7 +40,7 @@ symbols <- c("XLB", #SPDR Materials sector
              "SHY", #iShares 1-3 year TBonds
              "IEF", #iShares 3-7 year TBonds
              "TLT" ,#iShares 20+ year Bonds,
-             'TIPS',
+             'TIPS'
 )
 
 symbols<-c('SPY','EFA','IJS','EEM','AGG','005930.KS')
