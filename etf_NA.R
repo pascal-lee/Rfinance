@@ -8,6 +8,18 @@ require(RCurl)
 require(XML)
 
 
+#JS install
+
+# donwload homebrew if it doesn't already exist 
+if(!dir.exists("/usr/local/Homebrew")) {
+  system('ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"')
+}
+
+# download phantomjs using homebrew 
+if(!dir.exists("/usr/local/Cellar/phantomjs")) {
+  system("brew install phantomjs") 
+}
+
 # define url
 # url<-'https://finance.naver.com/sise/etf.nhn'
 # url<-'https://finance.naver.com/sise/sise_deposit.nhn'

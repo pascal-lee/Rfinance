@@ -89,7 +89,7 @@ symbols <- c("SPY", #SPDR S&P 500
 
 symbols
 # price data
-price_data<-tq_get(symbols, from='2020-01-01', to ='2020-03-27',
+price_data<-tq_get(symbols, from='2020-01-01', to ='2020-08-05',
                    get = 'stock.prices')
 
 # daily returns for our asses
