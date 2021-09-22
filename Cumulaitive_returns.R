@@ -98,12 +98,12 @@ ret_data<-price_data %>%
   tq_transmute(select= adjusted, mutate_fun = periodReturn, period='daily', col_rename = 'return')
 
 #
-# creat weigth table
+# create weight table
 wts<-rep(1,length(symbols))# equal weight
 wts_tbl<-tibble(symbol = symbols, wts=wts)
 wts_tbl
 
-# joint weights tableand return data
+# joint weights table and return data
 ret_data<-left_join(ret_data, wts_tbl, by='symbol')
 
 # calculate the weight average of our asset returns
